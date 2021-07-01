@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 
 
-namespace PrediccionNS  // MPRG2021 El primer paso debe ser añadir aquí vuestras iniciales
+namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vuestras iniciales
 {
+    ///<summary>Se han renombrado variables para hacerlas explicitas</summary>
+    ///<summary>Encapsulado campo para que fueran privados</summary>
+
     ///<summary> Clase para obtener la predicción de la temperatura a partir de las observaciones de los tres días previos
     /// La clase calcula la predicción tanto en grados celsius como farenheit 
     /// </summary>
-     public class prediccion
+
+
+    public class prediccion
     {
         private double temperaturaCelsius;
         private double temperaturaFarenheit;
