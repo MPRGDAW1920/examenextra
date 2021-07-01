@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 
 
-namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vuestras iniciales
+namespace PrediccionNS  // MPRG2021ok3 El primer paso debe ser añadir aquí vuestras iniciales
 {
     ///<summary>Se han renombrado variables para hacerlas explicitas</summary>
     ///<summary>Encapsulado campo para que fueran privados</summary>
-    ///<summary>Se han dado los valores aprovechando set de máxima y mínima</summary>
+    ///<summary>Se han dado los valores aprovechando set de máxima, mínima </summary>
+    ///<summary>Deberia hacer que el metodo que he creado calcularTemperaturasDiarias sirva para los tres días</summary>
 
     ///<summary> Clase para obtener la predicción de la temperatura a partir de las observaciones de los tres días previos
     /// La clase calcula la predicción tanto en grados celsius como farenheit 
@@ -57,9 +58,11 @@ namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vue
             double temperaturamedia1 = 0;
             double temperaturamedia2 = 0;
             double temperaturamedia3 = 0;
-            ///<summary>Incluimos valor en propiedades </summary>
-            /*       TemperaturaMaxima = +1000; 
-                   TemperaturaMinima = -1000;*/
+
+        ///<summary>Incluimos valor en propiedades 
+        ///         TemperaturaMaxima = +1000; 
+        ///         TemperaturaMinima = -1000;
+        ///</summary >
 
         ///<summary>Para cada día obtenemos la suma de temperaturas</summary>
         ///<remarks>Tenemos que tener al menos una observación </remarks>
@@ -75,7 +78,9 @@ namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vue
             {
                 return false;  // 
             }
-            for (contador = 0; contador < obsdia2.Count; contador++)
+            contador = CalcularTemperaturasDiarias(obsdia2, ref temperaturamedia2);
+
+/*            for (contador = 0; contador < obsdia2.Count; contador++)
             {
                 temperaturamedia2 = temperaturamedia2 + obsdia2[contador];
 
@@ -87,7 +92,7 @@ namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vue
                 {
                     TemperaturaMaxima = obsdia2[contador];
                 }
-            }
+            }*/
             temperaturamedia2 = temperaturamedia2 / obsdia2.Count;
          ///<exception cref="obsdia3">Tenemos que tener al menos una observación</exception>
   
@@ -96,7 +101,8 @@ namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vue
                 return false;  
             }
 
-            for (contador = 0; contador < obsdia3.Count; contador++)
+            contador = CalcularTemperaturasDiarias(obsdia2, ref temperaturamedia2);
+       /*     for (contador = 0; contador < obsdia3.Count; contador++)
             {
                 temperaturamedia3 = temperaturamedia3 + obsdia3[contador];
                 if (TemperaturaMinima > obsdia3[contador])
@@ -107,7 +113,7 @@ namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vue
                 {
                     TemperaturaMaxima = obsdia1[contador];
                 }
-            }
+            }*/
             temperaturamedia3 = temperaturamedia3 / obsdia3.Count;
 
             ///<summary> Finalmente calculamos la temperatura media total, dándo más peso 		
