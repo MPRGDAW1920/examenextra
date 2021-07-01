@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 
 
-namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vuestras iniciales
+namespace PrediccionNS  // MPRG2021ok2 El primer paso debe ser añadir aquí vuestras iniciales
 {
     ///<summary>Se han renombrado variables para hacerlas explicitas</summary>
     ///<summary>Encapsulado campo para que fueran privados</summary>
+    ///<summary>Se han dado los valores aprovechando set de máxima y mínima</summary>
 
     ///<summary> Clase para obtener la predicción de la temperatura a partir de las observaciones de los tres días previos
     /// La clase calcula la predicción tanto en grados celsius como farenheit 
@@ -60,8 +61,8 @@ namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vues
             /*       TemperaturaMaxima = +1000; 
                    TemperaturaMinima = -1000;*/
 
-            ///<summary>Para cada día obtenemos la suma de temperaturas</summary>
-            ///<remarks>Tenemos que tener al menos una observación </remarks>
+        ///<summary>Para cada día obtenemos la suma de temperaturas</summary>
+        ///<remarks>Tenemos que tener al menos una observación </remarks>
             if (obsdia1.Count <= 0)
             {
                
@@ -69,10 +70,10 @@ namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vues
             }
 
             contador = CalcularTemperaturasDiarias(obsdia1, ref temperaturamedia1);
-
+    ///<exception cref="obsdia2">Tenemos que tener al menos una observación</exception>
             if (obsdia2.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                return false;  // 
             }
             for (contador = 0; contador < obsdia2.Count; contador++)
             {
@@ -88,10 +89,11 @@ namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vues
                 }
             }
             temperaturamedia2 = temperaturamedia2 / obsdia2.Count;
-
+         ///<exception cref="obsdia3">Tenemos que tener al menos una observación</exception>
+  
             if (obsdia3.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                return false;  
             }
 
             for (contador = 0; contador < obsdia3.Count; contador++)
@@ -108,13 +110,13 @@ namespace PrediccionNS  // MPRG2021ok El primer paso debe ser añadir aquí vues
             }
             temperaturamedia3 = temperaturamedia3 / obsdia3.Count;
 
-            // Finalmente calculamos la temperatura media total, dándo más peso 		
-            // al último día que al primero
-            //
+            ///<summary> Finalmente calculamos la temperatura media total, dándo más peso 		
+            /// al último día que al primero</summary>
+            
             TemperaturaCelsius = 0.2 * temperaturamedia1 + 0.35 * temperaturamedia2 + 0.45 * temperaturamedia3;
 
-            // calculamos también la temperatura en grados farenheit
-            //
+            ///<summary> calculamos también la temperatura en grados farenheit</summary>
+           
             TemperaturaFarenheit = (TemperaturaCelsius * 1.8) + 32;
 
             return true;
