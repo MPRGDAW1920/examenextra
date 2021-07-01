@@ -16,3 +16,9 @@ C:\Users\alumno\Desktop\pilar\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordi
 C:\Users\alumno\Desktop\pilar\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.csproj.CoreCompileInputs.cache
 C:\Users\alumno\Desktop\pilar\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.exe
 C:\Users\alumno\Desktop\pilar\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.pdb
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\bin\Debug\Extraordinario2020.exe
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\bin\Debug\Extraordinario2020.pdb
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.exe
+C:\Users\alumno\Desktop\pilar\examenextra\Extraordinario2020\ConsoleApp2\obj\Debug\Extraordinario2020.pdb
